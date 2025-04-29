@@ -1,4 +1,4 @@
-package com.example.marketplace.model;
+package com.example.marketplace.database.model;
 
 public class Product {
     private String name;

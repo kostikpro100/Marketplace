@@ -1,4 +1,4 @@
-package com.example.marketplace.model;
+package com.example.marketplace.database.model;
 
 import java.util.List;
 
