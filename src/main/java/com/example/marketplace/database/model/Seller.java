@@ -1,12 +1,9 @@
 package com.example.marketplace.database.model;
 
-import java.util.List;
-
 public class Seller {
     private String name;
     private double rating;
     private String description;
-    private List<Product> products;
 
     public String getName() {
         return name;
@@ -30,13 +27,5 @@ public class Seller {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
     }
 }
