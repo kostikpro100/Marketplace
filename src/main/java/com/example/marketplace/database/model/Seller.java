@@ -1,5 +1,13 @@
 package com.example.marketplace.database.model;
 
+/*
+create table seller (
+sellerID bigserial primary key,
+sellerRating double precision,
+sellerDect varchar(256)
+)
+ */
+
 public class Seller {
     private String name;
     private double rating;

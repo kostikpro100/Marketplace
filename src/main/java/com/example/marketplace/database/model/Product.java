@@ -1,5 +1,15 @@
 package com.example.marketplace.database.model;
 
+/*
+create table product (
+productID bigserial primary key,
+productPrice bigserial,
+productCategory varchar(256),
+productDesc varchar(256),
+seller bigserial references seller(sellerID)
+)
+ */
+
 public class Product {
     private String name;
     private long price;
