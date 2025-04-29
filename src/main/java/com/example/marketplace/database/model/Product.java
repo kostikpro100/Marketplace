@@ -1,21 +1,37 @@
 package com.example.marketplace.database.model;
 
+import jakarta.persistence.*;
+
 /*
 create table product (
-productID bigserial primary key,
-productPrice bigserial,
-productCategory varchar(256),
-productDesc varchar(256),
-seller bigserial references seller(sellerID)
+product_id bigserial primary key,
+product_price bigserial,
+product_category varchar(256),
+product_desc varchar(256),
+seller bigserial references seller(sellerID),
+product_name varchar(256)
 )
  */
 
+@Table(name = "product")
+@Entity
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String name;
-    private long price;
+    private Long price;
     private Category category;
     private String description;
     private Seller seller;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
