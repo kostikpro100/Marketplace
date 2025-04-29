@@ -1,6 +1,5 @@
 package com.example.marketplace.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Seller {
@@ -9,28 +8,24 @@ public class Seller {
     private String description;
     private List<Product> products;
 
-    public Seller(String name, double rating, String description) {
-        this.name = name;
-        this.rating = rating;
-        this.description = description;
-        this.products = new ArrayList<>();
-        GlobalProperties.addToGlobal(this);
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getRating() {
         return rating;
     }
 
-    public String getDescription() {
-        return description;
+    public void setRating(double rating) {
+        this.rating = rating;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getDescription() {
+        return description;
     }
 
     public void setDescription(String description) {
@@ -41,11 +36,7 @@ public class Seller {
         return products;
     }
 
-    public void addProduct(Product product) {
-        this.products.add(product);
-    }
-
-    public void deleteProduct(Product product) {
-        this.products.remove(product);
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

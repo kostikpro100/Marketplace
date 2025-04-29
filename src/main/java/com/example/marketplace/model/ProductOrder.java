@@ -1,20 +1,22 @@
 package com.example.marketplace.model;
 
 public class ProductOrder {
-    private final OrderID orderID;
-    private final Product product;
-
-    public ProductOrder(OrderID orderID, Product product) {
-        this.orderID = orderID;
-        this.product = product;
-        GlobalProperties.addToGlobal(this);
-    }
+    private OrderID orderID;
+    private Product product;
 
     public OrderID getOrderID() {
         return orderID;
     }
 
+    public void setOrderID(OrderID orderID) {
+        this.orderID = orderID;
+    }
+
     public Product getProduct() {
         return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }

@@ -1,19 +1,22 @@
 package com.example.marketplace.model;
 
 public class OrderID {
-    private final Buyer buyer;
-    private final double price;
-
-    public OrderID(Buyer buyer, double price) {
-        this.buyer = buyer;
-        this.price = price;
-    }
+    private Buyer buyer;
+    private double price;
 
     public Buyer getBuyer() {
         return buyer;
     }
 
+    public void setBuyer(Buyer buyer) {
+        this.buyer = buyer;
+    }
+
     public double getPrice() {
         return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
