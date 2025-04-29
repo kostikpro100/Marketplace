@@ -2,7 +2,7 @@ package com.example.marketplace.model;
 
 public class Product {
     private String name;
-    private double price;
+    private long price;
     private Category category;
     private String description;
     private Seller seller;
@@ -15,11 +15,11 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
