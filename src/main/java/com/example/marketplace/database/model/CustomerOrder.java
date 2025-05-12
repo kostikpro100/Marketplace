@@ -21,7 +21,7 @@ public class CustomerOrder {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "buyer_id")
     private Buyer buyer;
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
     private Set<ProductOrder> products;
 
     public Long getId() {
