@@ -8,8 +8,8 @@ product_id bigserial primary key,
 product_name varchar(256),
 product_desc varchar(1024),
 product_price bigint,
-product_category bigint references category(category_id),
-product_seller bigint references seller(seller_id)
+category_id bigint references category(category_id),
+seller_id bigint references seller(seller_id)
 )
  */
 
@@ -27,10 +27,10 @@ public class Product {
     @Column(name = "product_price")
     private Long price;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_category")
+    @JoinColumn(name = "category_id")
     private Category category;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_seller")
+    @JoinColumn(name = "seller_id")
     private Seller seller;
 
     public Long getId() {
