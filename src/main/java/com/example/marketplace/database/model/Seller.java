@@ -4,7 +4,7 @@ package com.example.marketplace.database.model;
 create table seller (
 seller_id bigserial primary key,
 seller_rating double precision,
-seller_desc varchar(256),
+seller_desc varchar(1024),
 seller_name varchar(256)
 )
  */
