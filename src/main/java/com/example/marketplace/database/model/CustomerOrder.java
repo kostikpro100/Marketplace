@@ -39,4 +39,12 @@ public class CustomerOrder {
     public void setBuyer(Buyer buyer) {
         this.buyer = buyer;
     }
+
+    public Set<ProductOrder> getProducts() {
+        return products;
+    }
+
+    public void setProducts(Set<ProductOrder> products) {
+        this.products = products;
+    }
 }
