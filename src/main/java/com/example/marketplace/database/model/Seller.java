@@ -4,7 +4,7 @@ package com.example.marketplace.database.model;
 create table seller (
 seller_id bigserial primary key,
 seller_rating double precision,
-seller_desc varchar(256)
+seller_desc varchar(256),
 seller_name varchar(256)
 )
  */
@@ -18,26 +18,26 @@ public class Seller {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "seller_id")
     private Long id;
-    @Column(name = "seller_name")
-    private String name;
     @Column(name = "seller_rating")
     private Double rating;
     @Column(name = "seller_desc")
     private String description;
+    @Column(name = "seller_name")
+    private String name;
 
-    public String getName() {
-        return name;
+    public Long getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public double getRating() {
+    public Double getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(Double rating) {
         this.rating = rating;
     }
 
@@ -47,5 +47,13 @@ public class Seller {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
