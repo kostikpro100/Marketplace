@@ -1,5 +1,7 @@
 package com.example.marketplace.database.model;
 
+import jakarta.persistence.*;
+
 /*
 create table seller (
 seller_id bigserial primary key,
@@ -8,8 +10,6 @@ seller_desc varchar(1024),
 seller_name varchar(256)
 )
  */
-
-import jakarta.persistence.*;
 
 @Table(name = "seller")
 @Entity

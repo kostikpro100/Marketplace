@@ -2,6 +2,7 @@ package com.example.marketplace.database.model;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /*
@@ -38,7 +39,7 @@ public class Buyer {
             joinColumns = @JoinColumn(name = "buyer_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id")
     )
-    private Set<Category> preferences;
+    private Set<Category> preferences = new HashSet<>();
 
     public Long getId() {
         return id;

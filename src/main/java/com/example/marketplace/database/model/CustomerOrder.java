@@ -2,6 +2,7 @@ package com.example.marketplace.database.model;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /*
@@ -22,7 +23,7 @@ public class CustomerOrder {
     @JoinColumn(name = "buyer_id")
     private Buyer buyer;
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
-    private Set<ProductOrder> productsOrders;
+    private Set<ProductOrder> productsOrders = new HashSet<>();
 
     public Long getId() {
         return id;
