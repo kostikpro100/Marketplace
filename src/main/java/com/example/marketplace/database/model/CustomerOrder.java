@@ -22,7 +22,7 @@ public class CustomerOrder {
     @JoinColumn(name = "buyer_id")
     private Buyer buyer;
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
-    private Set<ProductOrder> products;
+    private Set<ProductOrder> productsOrders;
 
     public Long getId() {
         return id;
@@ -40,11 +40,11 @@ public class CustomerOrder {
         this.buyer = buyer;
     }
 
-    public Set<ProductOrder> getProducts() {
-        return products;
+    public Set<ProductOrder> getProductsOrders() {
+        return productsOrders;
     }
 
-    public void setProducts(Set<ProductOrder> products) {
-        this.products = products;
+    public void setProductsOrders(Set<ProductOrder> productsOrders) {
+        this.productsOrders = productsOrders;
     }
 }
