@@ -18,12 +18,12 @@ public class Seller {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "seller_id")
     private Long id;
+    @Column(name = "seller_name")
+    private String name;
     @Column(name = "seller_rating")
     private Double rating;
     @Column(name = "seller_desc")
     private String description;
-    @Column(name = "seller_name")
-    private String name;
 
     public Seller() {}
 
@@ -33,6 +33,14 @@ public class Seller {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Double getRating() {
@@ -49,13 +57,5 @@ public class Seller {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
