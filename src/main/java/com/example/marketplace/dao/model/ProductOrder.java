@@ -18,12 +18,10 @@ public class ProductOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_order_id")
     private Long id;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_order_id")
-    private CustomerOrder order;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_id")
-    private Product product;
+    @Column(name = "customer_order_id")
+    private Long order;
+    @Column(name = "product_id")
+    private Long product;
     @Column(name = "product_price")
     private Long price;
 
@@ -37,19 +35,19 @@ public class ProductOrder {
         this.id = id;
     }
 
-    public CustomerOrder getOrder() {
+    public Long getOrder() {
         return order;
     }
 
-    public void setOrder(CustomerOrder order) {
+    public void setOrder(Long order) {
         this.order = order;
     }
 
-    public Product getProduct() {
+    public Long getProduct() {
         return product;
     }
 
-    public void setProduct(Product product) {
+    public void setProduct(Long product) {
         this.product = product;
     }
 

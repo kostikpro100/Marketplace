@@ -19,11 +19,8 @@ public class CustomerOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
     private Long id;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "buyer_id")
-    private Buyer buyer;
-    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
-    private List<ProductOrder> products = new ArrayList<>();
+    @Column(name = "buyer_id")
+    private Long buyer;
 
     public CustomerOrder() {}
 
@@ -35,19 +32,11 @@ public class CustomerOrder {
         this.id = id;
     }
 
-    public Buyer getBuyer() {
+    public Long getBuyer() {
         return buyer;
     }
 
-    public void setBuyer(Buyer buyer) {
+    public void setBuyer(Long buyer) {
         this.buyer = buyer;
-    }
-
-    public List<ProductOrder> getProductsOrders() {
-        return products;
-    }
-
-    public void setProductsOrders(List<ProductOrder> products) {
-        this.products = products;
     }
 }

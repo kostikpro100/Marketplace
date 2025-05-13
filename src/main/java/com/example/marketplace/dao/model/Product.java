@@ -26,12 +26,10 @@ public class Product {
     private String description;
     @Column(name = "product_price")
     private Long price;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id")
-    private Category category;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "seller_id")
-    private Seller seller;
+    @Column(name = "category_id")
+    private Long category;
+    @Column(name = "seller_id")
+    private Long seller;
 
     public Product() {}
 
@@ -67,19 +65,19 @@ public class Product {
         this.price = price;
     }
 
-    public Category getCategory() {
+    public Long getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(Long category) {
         this.category = category;
     }
 
-    public Seller getSeller() {
+    public Long getSeller() {
         return seller;
     }
 
-    public void setSeller(Seller seller) {
+    public void setSeller(Long seller) {
         this.seller = seller;
     }
 }

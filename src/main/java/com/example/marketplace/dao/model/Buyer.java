@@ -42,8 +42,6 @@ public class Buyer {
             inverseJoinColumns = @JoinColumn(name = "category_id")
     )
     private Set<Category> preferences = new HashSet<>();
-    @OneToMany(mappedBy = "buyer", fetch = FetchType.LAZY)
-    private List<CustomerOrder> orders = new ArrayList<>();
 
     public Buyer() {}
 
@@ -87,11 +85,4 @@ public class Buyer {
         this.preferences = preferences;
     }
 
-    public List<CustomerOrder> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<CustomerOrder> orders) {
-        this.orders = orders;
-    }
 }
