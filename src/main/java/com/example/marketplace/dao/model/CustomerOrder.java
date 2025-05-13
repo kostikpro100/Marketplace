@@ -2,9 +2,6 @@ package com.example.marketplace.dao.model;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /*
 create table customer_order (
 order_id bigserial primary key,
