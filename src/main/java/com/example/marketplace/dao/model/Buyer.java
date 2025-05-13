@@ -41,6 +41,8 @@ public class Buyer {
     )
     private Set<Category> preferences = new HashSet<>();
 
+    public Buyer() {}
+
     public Long getId() {
         return id;
     }

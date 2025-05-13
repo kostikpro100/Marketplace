@@ -33,6 +33,8 @@ public class Product {
     @JoinColumn(name = "seller_id")
     private Seller seller;
 
+    public Product() {}
+
     public Long getId() {
         return id;
     }

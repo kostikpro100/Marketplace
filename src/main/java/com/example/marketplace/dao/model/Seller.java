@@ -25,6 +25,8 @@ public class Seller {
     @Column(name = "seller_name")
     private String name;
 
+    public Seller() {}
+
     public Long getId() {
         return id;
     }

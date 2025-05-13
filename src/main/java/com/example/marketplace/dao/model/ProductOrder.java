@@ -27,6 +27,8 @@ public class ProductOrder {
     @Column(name = "product_price")
     private Long price;
 
+    public ProductOrder() {}
+
     public Long getId() {
         return id;
     }

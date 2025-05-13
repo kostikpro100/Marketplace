@@ -19,6 +19,8 @@ public class Category {
     @Column(name = "category_name")
     private String name;
 
+    public Category() {}
+
     public Long getId() {
         return id;
     }

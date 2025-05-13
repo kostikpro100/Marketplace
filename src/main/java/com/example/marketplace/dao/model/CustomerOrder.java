@@ -25,6 +25,8 @@ public class CustomerOrder {
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
     private Set<ProductOrder> productsOrders = new HashSet<>();
 
+    public CustomerOrder() {}
+
     public Long getId() {
         return id;
     }
