@@ -82,5 +82,4 @@ public class Buyer {
     public void setPreferences(Set<Category> preferences) {
         this.preferences = preferences;
     }
-
 }
