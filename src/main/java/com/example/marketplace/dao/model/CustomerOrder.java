@@ -2,8 +2,8 @@ package com.example.marketplace.dao.model;
 
 import jakarta.persistence.*;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
 create table customer_order (
@@ -23,7 +23,7 @@ public class CustomerOrder {
     @JoinColumn(name = "buyer_id")
     private Buyer buyer;
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
-    private Set<ProductOrder> productsOrders = new HashSet<>();
+    private List<ProductOrder> products = new ArrayList<>();
 
     public CustomerOrder() {}
 
@@ -43,11 +43,11 @@ public class CustomerOrder {
         this.buyer = buyer;
     }
 
-    public Set<ProductOrder> getProductsOrders() {
-        return productsOrders;
+    public List<ProductOrder> getProductsOrders() {
+        return products;
     }
 
-    public void setProductsOrders(Set<ProductOrder> productsOrders) {
-        this.productsOrders = productsOrders;
+    public void setProductsOrders(List<ProductOrder> products) {
+        this.products = products;
     }
 }
