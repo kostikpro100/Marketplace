@@ -5,9 +5,9 @@ import jakarta.persistence.*;
 /*
 create table seller (
 seller_id bigserial primary key,
+seller_name varchar(256)
 seller_rating double precision,
 seller_desc varchar(1024),
-seller_name varchar(256)
 )
  */
 
