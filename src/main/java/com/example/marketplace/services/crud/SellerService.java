@@ -1,4 +1,4 @@
-package com.example.marketplace.services;
+package com.example.marketplace.services.crud;
 
 import com.example.marketplace.dao.model.Seller;
 import com.example.marketplace.dao.repositories.SellerRepository;

@@ -1,7 +1,7 @@
 package com.example.marketplace.web;
 
 import com.example.marketplace.dao.model.Seller;
-import com.example.marketplace.services.SellerService;
+import com.example.marketplace.services.crud.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
