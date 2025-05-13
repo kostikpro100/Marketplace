@@ -1,4 +1,4 @@
-package com.example.marketplace.database.model;
+package com.example.marketplace.dao.model;
 
 import jakarta.persistence.*;
 
