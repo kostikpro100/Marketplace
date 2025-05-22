@@ -20,7 +20,7 @@ public class CategoryService {
 
     private Category generateCategory() {
         Category category = new Category();
-        category.setName("приколы");
+        category.setName("овощи");
         return category;
     }
 }

@@ -22,7 +22,7 @@ public class ProductOrderService {
         ProductOrder productOrder = new ProductOrder();
         productOrder.setOrder(1L);
         productOrder.setProduct(1L);
-        productOrder.setPrice(500L);
+        productOrder.setPrice(1000L);
         return productOrder;
     }
 }
